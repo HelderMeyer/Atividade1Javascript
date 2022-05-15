@@ -1,0 +1,173 @@
+/*
+IMPORT DE FONTS
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+/*
+FORMATAÇÃO GERAL
+*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*
+FORMATAÇÃO DO BODY
+*/
+
+body {
+
+    background-color: #05244f;
+    font-family: 'Maven Pro', sans-serif;
+    color: black;
+
+}
+
+/*
+FORMATAÇÃO ESPECIAL
+*/
+
+.esconder {
+    display: none;
+}
+
+/*
+FORMATAÇÃO DO HEADER
+*/
+
+.header {
+
+    background-color: #2d7be8;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-h2 {
+
+    color: whitesmoke;
+
+}
+
+/*
+FORMATAÇÃO DO FORMULÁRIO
+*/
+
+.main {
+
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main-formulario {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+.main-formulario input {
+
+    border-radius: 4px;
+    border: #05244f solid 1px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+}
+
+.register {
+
+    background-color: rgb(8, 179, 8);
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.show-hide {
+
+    background-color: #2d7be8;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+#button-show-hide-table,
+#register {
+
+    padding-left: 0px;
+    border: whitesmoke solid 1px;
+
+}
+
+.main-formulario label {
+
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 400;
+    align-items: left;
+
+}
+
+/*
+FORMATAÇÃO DA TABELA
+*/
+
+.section-tabela {
+
+    border: red solid 10px;
+    background-color: whitesmoke;
+
+}
+
+.tabela {
+
+    color: whitesmoke;
+    border-collapse: collapse;
+    width: 60%;
+    height: 80px;
+    margin-left: auto;  
+    margin-right: auto;
+    margin-bottom: 50px;
+
+}
+
+th {
+
+    background-color: #2d7be8;
+
+}
+
+tr {
+
+    background-color: #4c8ce6;
+
+}
+
+th,
+td {
+
+    border: whitesmoke solid 1px;
+    padding: 10px;
+
+}
+
+tr:nth-child(even) {background-color: #114691;}

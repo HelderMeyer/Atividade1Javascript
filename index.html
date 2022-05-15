@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>SITE</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h2 class="header-h2">Cadastro de informações sobre os clientes</h2>
+    </header>
+
+    <main class="main">
+        <form class="main-formulario">
+            <label for="name">Nome Completo</label>
+            <input type="text" required id="name" placeholder="Nome">
+            <label for="cpf">CPF</label>
+            <input type="text" required id="cpf" placeholder="CPF">
+            <label for="email">Email</label>
+            <input type="email" required id="email" placeholder="Email">
+            <label for="phone">Telefone</label>
+            <input type="text" required id="phone" placeholder="Telefone">
+            <input type="button" value="Cadastrar" id="register" class="register">
+            <input type="button" id="button-show-hide-table" class="show-hide">
+        </form>
+    </main>
+
+    <section id="section-tabela">
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome Completo</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-tabela">
+            </tbody>
+        </table>
+    </section>
+
+    <script defer src="./assets/js/script.js"></script>
+</body>
+
+</html>
