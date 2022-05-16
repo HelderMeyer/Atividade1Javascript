@@ -25,38 +25,112 @@ function esconder() {
 
 }
 
-let inputCPF = document.getElementById('cpf');
+//
+// MÁSCARA CPF
+//
 
-inputCPF.addEventListener('input', mascaraCPF);
+let entradaCpf = document.getElementById('cpf');
 
-function mascaraCPF() {
-    let numerosCPF = inputCPF.value
-    let arrayCPF = []
-    if (numerosCPF.length == 11 && numerosCPF.indexOf('.') == -1) {
+entradaCpf.addEventListener('input', addMascaraCpf);
+
+function addMascaraCpf() {
+
+    let digitosCpf = entradaCpf.value
+    let arrayCpf = []
+
+    if (digitosCpf.length == 11 && digitosCpf.indexOf('.') == -1) {
+
         for (let i = 0; i < 11; i++) {
+
             if (i == 2 || i == 5) {
-                arrayCPF.push(numerosCPF[i]);
-                arrayCPF.push('.');
+                arrayCpf.push(digitosCpf[i]);
+                arrayCpf.push('.');
             } else if (i == 8) {
-                arrayCPF.push(numerosCPF[i]);
-                arrayCPF.push('-');
+                arrayCpf.push(digitosCpf[i]);
+                arrayCpf.push('-');
             } else {
-                arrayCPF.push(numerosCPF[i]);
+                arrayCpf.push(digitosCpf[i]);
             }
+
         }
-        console.log(arrayCPF.join(''));
-        inputCPF.value = arrayCPF.join('');
-    } else if (numerosCPF.indexOf('.') != -1) {
-        let x = 0
-        while (numerosCPF.indexOf('.') != -1 && x <= 3) { // !=3
-            numerosCPF = numerosCPF.replace('.', '');
-            numerosCPF = numerosCPF.replace('-', '');
-            console.log(numerosCPF);
-            inputCPF.value = numerosCPF;
-            x++
+
+        console.log(arrayCpf.join(''));
+        entradaCpf.value = arrayCpf.join('');
+
+    } else if (digitosCpf.indexOf('.') != -1) {
+
+        let w = 0
+        while (digitosCpf.indexOf('.') != -1 && w <= 3) {
+
+            digitosCpf = digitosCpf.replace('.', '');
+            digitosCpf = digitosCpf.replace('-', '');
+            console.log(digitosCpf);
+            entradaCpf.value = digitosCpf;
+            w++
+
         }
     }
 }
+
+//
+// MÁSCARA NÚMERO
+//
+
+let entradaTelefone = document.getElementById('phone');
+
+entradaTelefone.addEventListener('input', addMascaraTelefone);
+
+function addMascaraTelefone() {
+
+    let digitosTelefone = entradaTelefone.value
+    let arrayTelefone = []
+
+    if (digitosTelefone.length == 11 && digitosTelefone.indexOf('.') == -1) {
+
+        for (let i = -1; i < 11; i++) {
+
+            if (i == -1) {
+                arrayTelefone.push(digitosTelefone[i]);
+                arrayTelefone.push('(');
+            } else if (i == 1) {
+                arrayTelefone.push(digitosTelefone[i]);
+                arrayTelefone.push(')');
+                arrayTelefone.push(' ');
+            } else if(i == 2) {
+                arrayTelefone.push(digitosTelefone[i]);
+                arrayTelefone.push(' ');
+            } else if (i == 6) {
+                arrayTelefone.push(digitosTelefone[i]);
+                arrayTelefone.push('-');
+            } else {
+                arrayTelefone.push(digitosTelefone[i]);
+            }
+
+        }
+
+        console.log(arrayTelefone.join(''));
+        entradaTelefone.value = arrayTelefone.join('');
+
+    } else if (digitosTelefone.indexOf(' ') != -1) {
+
+        let z = 0
+        while (digitosTelefone.indexOf(' ') != -1 && z <= 3) {
+
+            digitosTelefone = digitosTelefone.replace('(', '');
+            digitosTelefone = digitosTelefone.replace(' ', '');
+            digitosTelefone = digitosTelefone.replace(')', '');
+            digitosTelefone = digitosTelefone.replace('-', '');
+            console.log(digitosTelefone);
+            entradaTelefone.value = digitosTelefone;
+            z++
+
+        }
+    }
+}
+
+//
+// ADD TABELA COM DADOS
+//
 
 buttonRegister.addEventListener('click', addTabela);
 
